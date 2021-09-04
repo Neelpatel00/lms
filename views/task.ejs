@@ -1,0 +1,22 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+<div class="main">
+<h1>Task Manager</h1>
+            
+<div class="container">
+    
+    <!-- Sidebar -->
+    <%- include("./partials/side.ejs",{login:login}) %> 
+    <!-- Main -->
+    <main class="container__main">
+        <form action="/addtask" method="POST" >
+          
+        <textarea class="inp"  name="dis" placeholder="Enter Task Discription"></textarea><br />
+        <label class="lb">Task Completed</label><input  type="radio" name="tf" value="true"><br />
+        <label class="lb">Task Not Completed</label><input  type="radio" name="tf" value="false"><br />
+        <label class="lb">Enter Deadline : </label><input class="date" type="date" name="tm" ><br />
+        <input class="button" type="submit" name="submit" value="ok">
+
+        </form>
+    </main>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<%- include("./partials/head.ejs",{login:login}) %>
+<div class="main">
+  <h1>Task Manager</h1>
+  <div class="container">
+
+    <%- include("./partials/side.ejs",{login:login}) %>
+      <main class="container__main">
+
+
+        <div class="part">
+          <h1>Task Details</h1>
+         
+            <div class="block">
+              <div class="side">
+                  <a href='/task/edit/<%= mid %>/<%= tasks._id %>  '>Edit</a>
+                  <a href='/task/delete/<%= mid %>/<%= tasks._id %>  '>Delete</a>
+              </div>
+                  <h2> Discription : <%= tasks.description %>
+                  </h2>
+                  <h3> Task Completed : <%= tasks.completed %>
+                  </h3>
+                  <p></p>
+                  <h3> Deadline : <%= tasks.time %>
+                  </h3>
+          </div>
+       
+        </div>
+      </main>
+  </div>
+</div>

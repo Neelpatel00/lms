@@ -1,0 +1,15 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+
+
+<div class="main">
+    <h1 style="text-align: left;">Update Profile</h1>
+    <form action="/profile/<%= tasks._id %> " class="card" method="POST" enctype="multipart/form-data">
+        
+        <input type="text" placeholder="Name" value="<%= tasks.username %> " name="unm" required /><br />
+        <input type="email" placeholder="Email" value="<%= tasks.email %> " name="email" required /><br />
+        <input type="password" placeholder="Change Password" name="pw" required /><br />
+        <input type="number" placeholder="Mobile Number" value="<%= tasks.mo_no %> " name="mo_no" required /><br />
+        <input type="file" name="img" required /><br />
+        <button type="submit" class="button">Sign Up</button><br />
+    </form>
+</div>

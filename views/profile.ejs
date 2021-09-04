@@ -1,0 +1,22 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+<div class="maincard">
+<div class="card">
+    <% user.forEach(us => { %>
+        <% if (ss._id == us.id) { %>
+            <img src="/uploads/<%= us.img %>" alt="Profile image"><br />
+
+            <h1><%= us.username %> </h1>
+            <br />
+            <h2> <%= us.email %>  </h2>
+            <br />
+            <h3> <%= us.mo_no %>  </h3>
+            <br />
+            <a href="/profile/<%= us.id %> " style="float: right;" class="button">Update Profile</a>
+            <br />
+        <% } %>
+   <% }); %> 
+    
+    
+
+</div>
+</div>

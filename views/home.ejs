@@ -1,0 +1,31 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+
+<body>
+    <div class="intro">
+        <h1>virtual internship program </h1>
+        <p>Get trained, work on live projects and get certified</p>
+    <% if (login == false) { %>
+     <div class="iner">  <a class="button" href="/getlogin">
+        <i class="fas fa-user-check"></i>&nbsp;&nbsp;
+        <label>Register For Free</label>
+       </a>
+       <a class="button2" href="/getlogin">
+        <label>Explore Tracks</label>&nbsp;&nbsp;
+        <i class="fas fa-angle-double-right"></i>
+       </a>
+    </div>
+    <% }
+     else { %>
+        <div class="iner">  <a class="button" href="/alltask">
+            <i class="fas fa-tasks"></i>&nbsp;&nbsp;
+        <label>Task Manager</label>
+       </a>
+       <a class="button2" href="/dash">
+        <label>Explore Tracks</label>&nbsp;&nbsp;
+        <i class="fas fa-angle-double-right"></i>
+       </a>
+    </div>
+    <% } %>
+    </div>
+</body>
+</html>

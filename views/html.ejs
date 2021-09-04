@@ -1,0 +1,41 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+
+<div class="main">
+    <a href="/dash"><h1>Courses</h1></a>
+    <div class="container">
+        <aside class="container__sidebar">
+            <a href="/html" class="btn">Html</a>
+            <a href="/css" class="btn">Css</a>
+            <a href="/javascript" class="btn">javascript</a>
+          </aside>
+          <main class="container__main">
+            <div class="in1">
+                <a href="https://www.w3schools.in/html-tutorial/intro/"><h1>Introduction</h1></a>
+                <p>HTML (Hypertext Markup Language) is the only markup language for creating web pages. It provides some titles, headings, paragraphs, lists, tables, embedded images, etc., to describe the structure of text-based and multimedia information in HTML documents.</p>
+            </div>
+            <div class="tag">
+                <h2>tags</h2>
+                <p>HTML tag which is usually written as <html>…. </html> or <HTML>…. </HTML> is the only tag which is a must for writing HTML pages. HTML tag has both a opening <html> and a closing tag </html>. The closing of tags is done by a forward slash (/) at the very start of the tag name.</p>
+            </div>
+            <div class="video">
+                <h2>More Know</h2>
+                <iframe width="750" height="400" src="https://www.youtube.com/embed/qz0aGYrrlhU">
+                </iframe>
+            </div>
+           <div class="btn1">
+             <a id="a1" href="#" class="btn btn1" onclick="pageup()">Mark Complete</a>
+            <a id="a2" href="/css" class="btn" style="display: none;">Next</a>
+            </div>
+            
+        </main>
+    </div>
+</div>
+<script>
+    function pageup(){
+        
+        document.getElementById("a1").style.backgroundColor = "green";
+        document.getElementById("a1").textContent = "Completed";
+        document.getElementById("a1").onclick = "";
+        document.getElementById("a2").style.display = "inline";
+    }
+</script>

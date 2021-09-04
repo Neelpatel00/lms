@@ -1,0 +1,40 @@
+<%- include("./partials/head.ejs",{login:login}) %> 
+
+<div class="main">
+    <a href="/dash"><h1>Courses</h1></a>
+    <div class="container">
+        <aside class="container__sidebar">
+            <a href="/html" class="btn">Html</a>
+            <a href="/css" class="btn">Css</a>
+            <a href="/javascript" class="btn">javascript</a>
+          </aside>
+          <main class="container__main">
+            <div class="in1">
+                <a href="https://www.w3schools.in/javascript-tutorial/"><h1>Introduction</h1></a>
+                <p>JavaScript is an object-based client-side scripting language, which is very popular and is used to create dynamic and interactive web pages. This JavaScript tutorial series will help you get started learning JavaScript from the basics.</p>
+            </div>
+            <div class="tag">
+                <h2>JavaScript Object Orianted</h2>
+                <p>Object-oriented (OO) languages usually are recognized through their use of classes for creating various objects which have similar properties and methods. It is to be noted that, ECMA-Script has no concept of classes, and hence objects are different than in class-based languages.</p>
+            </div>
+            <div class="video">
+                <h2>More Know</h2>
+                <iframe width="750" height="400" src="https://www.youtube.com/embed/W6NZfCO5SIk">
+                </iframe>
+            </div>
+            <div class="btn1">
+                <a id="a1" href="#" class="btn btn1" onclick="pageup()">Mark Complete</a>
+               <a id="a2" href="/dash" class="btn" style="display: none;">Back To Course</a>
+               </div>
+        </main>
+    </div>
+</div>
+<script>
+    function pageup(){
+        
+        document.getElementById("a1").style.backgroundColor = "green";
+        document.getElementById("a1").textContent = "Completed";
+        document.getElementById("a1").onclick = "";
+        document.getElementById("a2").style.display = "inline";
+    }
+</script>

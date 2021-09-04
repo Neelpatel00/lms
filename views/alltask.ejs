@@ -1,0 +1,53 @@
+<%- include("./partials/head.ejs",{login:login}) %>
+
+<div class="main">
+    <h1>Task Manager</h1>
+    <div class="container">
+
+        <%- include("./partials/side.ejs",{login:login}) %>
+            <main class="container__main">
+
+
+                <div class="part">
+                    <h1> Not Completed Tasks </h1>
+                        <% tasks.forEach(task=> { %>
+                            <% if (task.completed==false) { %>
+                                <div class="block">
+                                    
+                                    <a href='/alltask/<%= tid %>/<%= task._id %> '>
+                                        <h2> Discription : <%= task.description %>
+                                        </h2>
+                                        <h3> Task Completed : <%= task.completed %>
+                                        </h3>
+                                        <p></p>
+                                        <h3> Deadline : <%= task.time %>
+                                        </h3>
+                                    </a>
+                                </div>
+                                <% } %>
+                                    <% }); %>
+                </div>
+
+                <div class="part">
+                    <h1> Completed Tasks </h2>
+                        <% tasks.forEach(task=> { %>
+                            <% if (task.completed==true) { %>
+                                <div class="block">
+                                    <a href='/alltask/<%= tid %>/<%= task._id %> '>
+                                        <h2> Discription : <%= task.description %>
+                                        </h2>
+                                        <h3> Task Completed : <%= task.completed %>
+                                        </h3>
+                                        <h3> Deadline : <%= task.time %>
+                                        </h3>
+                                    </a>
+            
+                                </div>
+                                <% } %>
+                                    <% }); %>
+                </div>
+
+
+            </main>
+    </div>
+</div>

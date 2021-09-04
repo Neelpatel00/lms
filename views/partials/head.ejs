@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe81660518.js" crossorigin="anonymous"></script>
+
+    <title>LMS</title>
+</head>
+<body>
+    <header class="head">
+        <a href="/"><h1>getWork</h1></a>
+        <nav class="nv">
+            <% if (login == false) { %>
+                <a href="/getlogin">Login | Register</a>
+            
+            <% }
+             else { %>
+                <a href="/logout">Logout</a>
+                <a href="/user">Profile</a>
+            <% } %>
+        </nav>
+    </header>
